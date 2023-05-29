@@ -18,5 +18,5 @@ jobs:
 
       - name: Deploy to Local
         run: |
-          cp -r $GITHUB_WORKSPACE/* C:/laragon/www
+          cp -r $GITHUB_WORKSPACE/* D:\WEEK4
 
