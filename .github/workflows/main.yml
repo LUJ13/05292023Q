@@ -17,7 +17,7 @@ jobs:
 
 
       - name: Deploy to Local
-        run: |
-          cp -r C:\actions-runner\_work\_temp c:\anything
+        run: "cp -r . c:\anything"
+          
          
 
