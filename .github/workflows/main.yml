@@ -1,24 +1,19 @@
-name: Build and Deploy
-on: 
+name: Deploy to Local
+
+on:
   push:
     branches:
-      - main
+      - main  # 或者其他你想要触发部署的分支
+
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest # 构建环境使用 ubuntu
+  deploy:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout  # 将代码拉到虚拟机
-        uses: actions/checkout@v2.3.1  
-        with:
-          persist-credentials: false
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-      - name: Install and Build # 下载依赖 打包项目
+      - name: Deploy to Local
         run: |
-          npm install
-          npm run build
+          cp -r $GITHUB_WORKSPACE/* C:\laragon\www
 
-      - name: Deploy 🚀 # 部署
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
-        with:
-          branch: static-pages # 部署后提交到的分支
-          folder: dist # 这里填打包好的目录名称
