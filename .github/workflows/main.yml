@@ -18,5 +18,6 @@ jobs:
 
       - name: Deploy to Local
         run: |
-          cp -r $GITHUB_WORKSPACE/* D:\WEEK4
+          cp -r C:\actions-runner\_work\_temp c:\anything
+         
 
