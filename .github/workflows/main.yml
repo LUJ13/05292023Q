@@ -13,8 +13,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Create Target Folder
-        run: mkdir -p C:/laragon/www
+      
 
 
       - name: Deploy to Local
