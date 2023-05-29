@@ -17,7 +17,7 @@ jobs:
 
 
       - name: Deploy to Local
-        run: "cp -r . c:\anything"
+        run: cp test c:\anything
           
          
 
