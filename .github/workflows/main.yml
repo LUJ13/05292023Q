@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: DESKTOP-PB534D3
 
     steps:
       - name: Checkout Repository
